@@ -16,7 +16,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     url('news/', news, name="News"),
     url('category/', category, name="Category"),
- 	url('tags/', tags, name = 'tags'),
+ 	url('tags/', tags, name = 'Tags'),
     url('drafts/', drafts, name = 'Drafts'),
     url('autors/', autors, name = 'Autors'),
     url('thanks/', thanks, name = 'Thanks')
