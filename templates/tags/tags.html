@@ -1,0 +1,17 @@
+{% for error in errors %}
+  {{error}}
+    <p>
+{% endfor %}
+<form action="/tags/" method="post">
+    {% csrf_token %}
+    {{ formset }}
+    <input type="submit" value="Submit" />
+</form>
+
+ <p>
+{% for tag in tags %}
+    
+    {{ tag.tag_name }}
+    ,
+{% endfor %}
+
