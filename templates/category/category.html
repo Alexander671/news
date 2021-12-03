@@ -1,0 +1,17 @@
+<form action="/category/" method="post">
+    {% csrf_token %}
+    {{ formset }}
+    <input type="submit" value="Submit" />
+</form>
+
+ <p>
+------------------------------<p>
+{% for category in categories %}
+    
+    {{ category.parent }}<p>
+    {{ category.category_name }}<p>
+
+    ------------------------------
+    <p>
+{% endfor %}
+
