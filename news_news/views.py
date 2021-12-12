@@ -7,3 +7,5 @@ def news(request):
     news = News.objects.all()
     return render(request, 'news/news.html', {'news':news})
 
+def redirect_view(request):
+    return render(request, 'base.html')

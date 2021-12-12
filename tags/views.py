@@ -6,6 +6,8 @@ from django.forms import formset_factory
 from .form import TagsForm
 from django.forms import modelformset_factory
 from itertools import chain
+
+
 def tags(request):
     TagFormSet = modelformset_factory(Tags, fields=('tag_name',))
     tags = Tags.objects.all()

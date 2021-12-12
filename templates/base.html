@@ -19,16 +19,15 @@
   				<a href="{% url 'logout' %}">Log Out</a></p>
 			{% else %}
   				<p>You are not logged in
-				<a href="{% url 'signup' %}">Sign Up</a><p>
-				   or  
-
-  				<a href="{% url 'login' %}">Log In</a>
+				<a href="{% url 'signup' %}">Sign Up</a>
+				or  
+				<a href="{% url 'login' %}">Log In</a><p>
 
 			{% endif %}
 			<a class="navbar-item" href="../category"> Категории</a>
-        	<a class="navbar-item" href="../todo"> Список дел </a>
+        	<a class="navbar-item" href="../tags"> Теги </a>
 			<p>
-			<a class="navbar-item" href="../certificate"> Сертификат</a>
+			<a class="navbar-item" href="../news"> Новости</a>
 
         	</div>
          </div>
