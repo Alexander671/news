@@ -6,7 +6,7 @@ from django.views.generic.base import TemplateView # new
 from news_news.views import news, redirect_view
 from category.views import category, thanks
 from tags.views import tags
-from autors.views import autors
+from autors.views import autors, become_autor
 from drafts.views import drafts
 
 urlpatterns = [
@@ -19,5 +19,7 @@ urlpatterns = [
  	re_path('tags/', tags, name = 'Tags'),
     re_path('drafts/', drafts, name = 'Drafts'),
     re_path('autors/', autors, name = 'Autors'),
-    re_path('thanks/', thanks, name = 'Thanks')
+    re_path('thanks/', thanks, name = 'Thanks'),
+    re_path('become_autor/', become_autor, name = 'Become_autor'),
+    
 ] 
