@@ -25,9 +25,7 @@ SECRET_KEY = '2ksy)--#x52*yx=n8*fxi-orb+$@a_x5&^#ue$aoe!p(p=u!k='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,3 +130,4 @@ STATIC_URL = '/static/'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
