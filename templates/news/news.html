@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+
 {% for new in news %}
     {{ new.name }}<p>
     {{ new.new_text }}<p>
@@ -6,3 +9,4 @@
 
 {% endfor %}
 
+{% endblock %}

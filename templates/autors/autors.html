@@ -1,1 +1,35 @@
-{{autors}}
+{% extends 'base.html' %}
+{% block content %}
+{% if not is_autor %}
+
+<form action="/autors/" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ formset }} <p>
+    <input type="submit" value="Become an author" />
+</form>
+
+{% else %}
+
+
+<form action="/autor_delete/" method="post">
+       {% csrf_token %}
+   <input type="submit" value="Delete Author" />
+</form>
+
+
+
+{% endif %}
+
+ <p>
+------------------------------<p>
+{% for autor in autors %}
+    
+    {{ autor.description }}<p>
+    {{ autor.user }}<p>
+
+    ------------------------------
+    <p>
+{% endfor %}
+
+{% endblock %}
