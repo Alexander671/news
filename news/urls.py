@@ -8,7 +8,7 @@ from news_news.views import news, redirect_view
 from category.views import category, thanks
 from tags.views import tags
 from autors.views import Autors, delete
-from drafts.views import drafts
+from drafts.views import Drafts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -18,7 +18,7 @@ urlpatterns = [
     re_path('news/', news, name="News"),
     re_path('category/', category, name="Category"),
  	re_path('tags/', tags, name = 'Tags'),
-    re_path('drafts/', drafts, name = 'Drafts'),
+    url('drafts/', Drafts.as_view(), name = 'Drafts'),
     url('autors/', Autors.as_view(), name = 'Autors'),
     re_path('autor_delete/', delete , name = 'Delete'),
     re_path('thanks/', thanks, name = 'Thanks')    

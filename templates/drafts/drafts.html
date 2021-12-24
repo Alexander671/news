@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+Drafts
+{% if not is_autor %}
+
+<form action="/drafts/" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ formset }} <p>
+    <input type="submit" value="Become an author" />
+</form>
+
+{% else %}
+
+
+<form action="/drafts/" method="post">
+       {% csrf_token %}
+   <input type="submit" value="Create Draft" />
+</form>
+
+
+
+{% endif %}
+
+ <p>
+------------------------------<p>
+{% for draft in drafts %}
+    
+    {{ draft.text }}<p>
+    {{ draft.user_draft }}<p>
+
+    ------------------------------
+    <p>
+{% endfor %}
+
+{% endblock %}

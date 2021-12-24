@@ -1,8 +1,3 @@
-
-# accounts/views.py
-from django import forms
-from django.forms.formsets import formset_factory
-from django.forms.models import modelformset_factory
 from django.http import HttpResponse
 from django.views.generic.base import View
 from django.shortcuts import redirect, render
