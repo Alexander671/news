@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'category',
     'autors',
     'drafts',
-    'news_news'
+    'news_news',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

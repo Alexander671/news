@@ -8,4 +8,4 @@ class DraftsForm(ModelForm):
     
     class Meta:
         model = DraftsModel
-        fields = ['text']
+        fields = ['text', 'images']

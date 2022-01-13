@@ -2,37 +2,35 @@
 {% block content %}
 
 
-Drafts
 {% if not is_autor %}
 
-<form action="/drafts/" method="post">
-    {% csrf_token %}
-    {{ form.non_field_errors }}
-    {{ formset }} <p>
-    <input type="submit" value="Become an author" />
-</form>
+
 
 {% else %}
 
 
-<form action="/drafts/" method="post">
+<form method="post" enctype="multipart/form-data">
        {% csrf_token %}
-   <input type="submit" value="Create Draft" />
+       {{ formset.as_p }}
+       <button type="submit">Create Draft </button>
 </form>
-
 
 
 {% endif %}
 
- <p>
+    <ul>
 ------------------------------<p>
 {% for draft in drafts %}
+    {{ draft.text }}
+        
+    {% if draft.images %}
+        <p><img src="{{draft.images.url}}"></p>
+    {% else %}
+        <p></p>
+    {% endif %}
     
-    {{ draft.text }}<p>
-    {{ draft.user_draft }}<p>
-
-    ------------------------------
-    <p>
+    ------------------------------<p>
 {% endfor %}
+    </ul>
 
 {% endblock %}
